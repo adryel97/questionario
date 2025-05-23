@@ -45,14 +45,14 @@ jobs:
       # -- FIM DOS PASSOS ADICIONADOS --
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v5 # Esta action está na v5, que é a mais recente
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4 # Use a versão mais recente (v4)
+        uses: actions/upload-pages-artifact@v3 # <--- MUDE AQUI PARA v3
         with:
           # Upload entire repository
           path: './dist' # Mantenha isso, pois é o caminho correto para a pasta gerada
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Esta action está na v4, que é a mais recente
